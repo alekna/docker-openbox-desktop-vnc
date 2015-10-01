@@ -1,0 +1,7 @@
+#---------------------------------------------
+# TINT2CONF CONFIG FILE
+default_theme = /root/.config/tint2/default.tint2rc
+cmd_property = python /usr/bin/tintwizard.py
+width = 500
+height = 448
+
