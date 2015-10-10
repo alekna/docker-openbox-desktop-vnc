@@ -10,6 +10,7 @@ RUN yum install -y tightvnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm 
 
 ADD xinitrc /etc/X11/xinit/xinitrc
 ADD .config /root/.config
+ADD .bashrc /root/.bashrc
 ADD xstartup /root/.vnc/xstartup
 
 RUN echo "root" | vncpasswd -f > /root/.vnc/passwd; chmod 600 /root/.vnc/passwd
