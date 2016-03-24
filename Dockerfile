@@ -6,7 +6,9 @@ EXPOSE 5900
 ENV HOME /root
 WORKDIR /root
 
-RUN yum install -y tightvnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm which dejavu-sans-fonts dejavu-sans-mono-fonts; yum clean all 
+RUN yum install -y tightvnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm which dejavu-sans-fonts dejavu-sans-mono-fonts; \
+    yum update -y; \
+    yum clean all
 
 ADD xinitrc /etc/X11/xinit/xinitrc
 ADD .config /root/.config
