@@ -8,6 +8,7 @@ WORKDIR /root
 
 RUN dnf -y update
 RUN dnf -y install tightvnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm which dejavu-sans-fonts dejavu-sans-mono-fonts
+RUN dnf clean all
 
 ADD xinitrc /etc/X11/xinit/xinitrc
 ADD .config /root/.config
