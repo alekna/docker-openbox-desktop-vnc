@@ -1,4 +1,6 @@
 # Openbox virtual desktop running in Docker container
+[![](https://badge.imagelayers.io/alekna/openbox-desktop-vnc:latest.svg)](https://imagelayers.io/?images=alekna/openbox-desktop-vnc:latest 'Get your own badge on imagelayers.io')
+
 Use VNC Viewer to access the desktop with ``root`` as the default password.
 
 To change VNC password run ``vncpasswd``
