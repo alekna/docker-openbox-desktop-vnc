@@ -8,4 +8,4 @@ Configurable variables
 * ``DEPTH`` Specify the pixel depth in bits of the desktop to be created. Default is ``16``
 * ``TZ`` Specify timezone. Default: ``Etc/UTC``
 
-![Screenshot](http://static.alekna.org.s3.amazonaws.com/github/docker-openbox-desktop-vnc-screenshot.jpg "Screenshot")
+![Screenshot](http://static.alekna.org.s3.amazonaws.com/github/docker-openbox-desktop-vnc-screenshot.png "Screenshot")
