@@ -1,4 +1,4 @@
-FROM fedora:21
+FROM fedora:23
 MAINTAINER laurynas@alekna.org 
 
 EXPOSE 5900 
@@ -6,9 +6,9 @@ EXPOSE 5900
 ENV HOME /root
 WORKDIR /root
 
-RUN yum install -y tightvnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm which dejavu-sans-fonts dejavu-sans-mono-fonts; \
-    yum update -y; \
-    yum clean all
+RUN dnf -y update; \
+    dnf -y install tightvnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm which dejavu-sans-fonts dejavu-sans-mono-fonts; \
+    dnf clean all
 
 ADD xinitrc /etc/X11/xinit/xinitrc
 ADD .config /root/.config
