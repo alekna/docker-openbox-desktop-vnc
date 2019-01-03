@@ -7,7 +7,6 @@ To change VNC password run ``vncpasswd``
 
 Configurable variables
 * ``GEOMETRY`` Specify the size of the desktop to be created. Default is ``1024x768``
-* ``DEPTH`` Specify the pixel depth in bits of the desktop to be created. Default is ``16``
 * ``TZ`` Specify timezone. Default: ``Etc/UTC``
 
 ![Screenshot](http://assets.alekna.org/github/docker-openbox-desktop-vnc-screenshot.png "Screenshot")

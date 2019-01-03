@@ -6,7 +6,6 @@ EXPOSE 5900
 
 ENV HOME /root
 ENV GEOMETRY 1024x768
-ENV DEPTH 16
 ENV TZ Etc/UTC
 
 RUN dnf -y update; \
@@ -22,4 +21,4 @@ ADD xstartup /root/.vnc/xstartup
 RUN echo "root" | vncpasswd -f > /root/.vnc/passwd; \
     chmod 600 /root/.vnc/passwd
 
-CMD ln -sf /usr/share/zoneinfo/$TZ /etc/localtime; vncserver -kill :0; vncserver :0 -geometry $GEOMETRY -depth $DEPTH; tail -f /root/.vnc/*.log
+CMD ln -sf /usr/share/zoneinfo/$TZ /etc/localtime; vncserver -kill :0; vncserver :0 -geometry $GEOMETRY; tail -f /root/.vnc/*.log
