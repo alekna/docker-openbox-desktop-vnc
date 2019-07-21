@@ -1,4 +1,4 @@
-FROM fedora:29
+FROM fedora:30
 MAINTAINER laurynas@alekna.org 
 
 WORKDIR /root
@@ -9,7 +9,7 @@ ENV GEOMETRY 1024x768
 ENV TZ Etc/UTC
 
 RUN dnf -y update; \
-    dnf -y install tigervnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm which dejavu-sans-fonts dejavu-sans-mono-fonts findutils unzip; \
+    dnf -y install tigervnc-server openbox dbus-x11 mate-terminal tint2 pcmanfm which dejavu-sans-fonts dejavu-sans-mono-fonts findutils; \
     dnf clean all; \
     dbus-uuidgen > /etc/machine-id
 
