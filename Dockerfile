@@ -6,13 +6,14 @@ ENV HOME /root
 ENV TZ Etc/UTC
 ENV SHELL /bin/bash
 ENV PS1='# '
-ENV SCREEN 1920x1080x24
-ENV SCALE 1
 
 RUN apt-get update; \
     apt-get upgrade -y; \
-    apt-get install -y xvfb x11vnc openbox tint2 pcmanfm ttf-dejavu xfce4-terminal supervisor procps curl; \
+    apt-get install -y tigervnc-standalone-server openbox tint2 pcmanfm xfce4-terminal supervisor procps curl; \
     apt-get clean
+RUN mkdir /root/.vnc; \
+    echo "root" | vncpasswd -f > /root/.vnc/passwd; \
+    chmod 600 /root/.vnc/passwd
 
 ADD etc/xdg/pcmanfm /root/.config/pcmanfm
 ADD etc /etc
