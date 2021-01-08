@@ -1,4 +1,5 @@
 # Openbox virtual desktop running in Docker container
+Default password: `root`.
 
 Configurable variables
 * ``TZ`` Sets timezone. Default: ``Etc/UTC``
