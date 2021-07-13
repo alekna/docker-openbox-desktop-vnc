@@ -1,6 +1,9 @@
 name: Publish docker image
 
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * 1'
   push:
     branches:
       - master
@@ -10,10 +13,8 @@ env:
     REPO: openbox-desktop-vnc
 
 jobs:
-  push:
+  build-and-publish:
     runs-on: ubuntu-latest
-    if: github.event_name == 'push'
-
     steps:
       - uses: actions/checkout@v2
 
