@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bullseye
 
 EXPOSE 5900 
 
@@ -6,10 +6,11 @@ ENV HOME /root
 ENV TZ Etc/UTC
 ENV SHELL /bin/bash
 ENV PS1='# '
+ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update; \
-    apt-get upgrade -y; \
-    apt-get install -y tigervnc-standalone-server openbox tint2 pcmanfm xfce4-terminal supervisor procps curl; \
+RUN apt-get update -qq; \
+    apt-get upgrade -yqq; \
+    apt-get install -yqq tigervnc-standalone-server openbox tint2 pcmanfm xfce4-terminal supervisor procps curl; \
     apt-get clean
 RUN mkdir /root/.vnc; \
     echo "root" | vncpasswd -f > /root/.vnc/passwd; \
