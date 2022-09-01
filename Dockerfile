@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -qq; \
     apt-get upgrade -yqq; \
-    apt-get install -yqq tigervnc-standalone-server openbox tint2 pcmanfm xfce4-terminal supervisor procps curl; \
+    apt-get install -yqq tigervnc-standalone-server openbox tint2 pcmanfm xfce4-terminal supervisor procps curl telnet iproute2; \
     apt-get clean
 RUN mkdir /root/.vnc; \
     echo "root" | vncpasswd -f > /root/.vnc/passwd; \
